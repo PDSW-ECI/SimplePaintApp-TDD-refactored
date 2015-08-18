@@ -16,8 +16,8 @@
     <dependencies>
         <dependency>
             <groupId>mysql</groupId>
-            <artifactId>mysql-connector</artifactId>
-            <version>5.1.17</version>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.36</version>
         </dependency>
 
         <dependency>
