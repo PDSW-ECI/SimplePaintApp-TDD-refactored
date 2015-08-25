@@ -27,7 +27,6 @@ import java.awt.Point;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -53,6 +52,29 @@ public class SimplePaintAppController {
     }
     
     
+    /**
+     * DOCUMENTAR
+     */
+    public void deshacerAccion() throws ModelException{
+        //IMPLEMENTAR PRUEBAS ANTES DE IMPLEMENTAR CÓDIGO!
+    }
+    
+    /**
+     * DOCUMENTAR
+     */
+    public void rehacerAccion() throws ModelException{
+        //IMPLEMENTAR PRUEBAS ANTES DE IMPLEMENTAR CÓDIGO!
+    }
+
+    /**
+     * Obj: rotar el modelo actual de la herramienta de dibujo
+     * @param xorigen eje X del punto de referencia para la rotación
+     * @param yorigen eje Y del punto de referencia para la rotación
+     * @param anguloRad ángulo de rotación, en radianes.
+     */
+    public void rotar(int xorigen, int yorigen, int anguloRad){
+        //IMPLEMENTAR PRUEBAS ANTES DE IMPLEMENTAR CÓDIGO!
+    }
     
     
     /**

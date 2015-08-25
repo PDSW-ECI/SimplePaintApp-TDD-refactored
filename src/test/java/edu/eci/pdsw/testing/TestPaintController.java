@@ -24,9 +24,48 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- *
- * @author hcadavid
- */
+ * Conjunto de pruebas para XXXXXXXXX
+ * 
+
+Estados (http://asciiflow.com/):
+
+                 +--------------------+      
++-+              |                    |      
++-+              |                    |      
+ |               |                    |      
+ |        +------v----+          +----+-----+
+ |        |           |          |          |
+ +-------->           +---------->          |
+          |           |          |          |
+          |           |          |          |
+          |           |          |          |
+          +--^--------+          +-------+--+
+             |                           |   
+             |                           |   
+             |                           |   
+             |        +-----------+      |   
+             |        |           |      |   
+             +--------+           |      |   
+                      |           <------+   
+                      |           |          
+                      |           |          
+                      +-----------+          
+
+Clases de equivalencia:
+
+CE1. Clase A
+CE2. Clase B
+CE3. Clase C
+
+Condiciones de frontera a evaluar:
+
+F1.
+F2.
+F3.
+
+ 
+* @author XXXXXXX
+*/
 public class TestPaintController {
     
     SimplePaintAppController ctrl;
