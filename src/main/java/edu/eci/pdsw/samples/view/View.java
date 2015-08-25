@@ -1,11 +1,11 @@
-package edu.eci.arsw.samples;
+package edu.eci.pdsw.samples.view;
 
 import java.awt.Color;
 import java.awt.Graphics;
 
 import javax.swing.JComponent;
 
-import org.jacksoft.paintmodel.Model;
+import edu.eci.pdsw.samples.view.model.Model;
 
 
 /**
@@ -21,15 +21,14 @@ public class View extends JComponent{
 	 */
 	private static final long serialVersionUID = 1L;
 	Model model;
-	PaintMouseListener controller;
 	Line temporalLine=null;
+        
 
-	public View(Model model) {
+	public View(Model model, PaintMouseListener pml) {
 		super();
 		this.model = model;
-		controller=new PaintMouseListener(model,this);
-		addMouseListener(controller);
-		addMouseMotionListener(controller);
+		addMouseListener(pml);
+		addMouseMotionListener(pml);
 	}
 
 	public void setTemporalLine(Line l){

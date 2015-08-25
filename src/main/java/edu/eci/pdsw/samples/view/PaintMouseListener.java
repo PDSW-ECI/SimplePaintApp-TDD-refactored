@@ -1,11 +1,13 @@
-package edu.eci.arsw.samples;
+package edu.eci.pdsw.samples.view;
 
+import edu.eci.pdsw.samples.controller.SimplePaintAppController;
+import edu.eci.pdsw.samples.view.model.DrawLineState;
 import java.awt.Point;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
-import org.jacksoft.paintmodel.Model;
+import edu.eci.pdsw.samples.view.model.Model;
 
 
 
@@ -20,14 +22,13 @@ public class PaintMouseListener implements MouseListener, MouseMotionListener {
 
 	DrawLineState state=DrawLineState.READY_FOR_FIRST_POINT;
 	Point firstPoint;
-	Model model;
-	View view;
+        SimplePaintAppController ctrl;
+       
+        
 	
-	
-	public PaintMouseListener(Model m,View v) {
+	public PaintMouseListener(SimplePaintAppController ctrl) {
 		super();
-		model=m;
-		view=v;
+		this.ctrl=ctrl;
 	}
 
 
@@ -38,8 +39,7 @@ public class PaintMouseListener implements MouseListener, MouseMotionListener {
 			state=DrawLineState.FIRST_POINT_SELECTED;
 		}
 		else if (state==DrawLineState.FIRST_POINT_SELECTED){
-			model.addLine(new Line(e.getX(),e.getY(),(int)firstPoint.getX(),(int)firstPoint.getY()));
-			view.repaint();
+			ctrl.addLine(new Line(e.getX(),e.getY(),(int)firstPoint.getX(),(int)firstPoint.getY()));			
 			state=DrawLineState.READY_FOR_FIRST_POINT;
 		}
 		
@@ -82,8 +82,8 @@ public class PaintMouseListener implements MouseListener, MouseMotionListener {
 	public void mouseMoved(MouseEvent e) {
 		
 		if (state==DrawLineState.FIRST_POINT_SELECTED){
-			view.setTemporalLine(new Line((int)firstPoint.getX(),(int)firstPoint.getY(),(int)e.getX(),(int)e.getY()));
-			view.repaint();
+			((View)ctrl.getViewContainer().getComponent(0)).setTemporalLine(new Line((int)firstPoint.getX(),(int)firstPoint.getY(),(int)e.getX(),(int)e.getY()));
+			ctrl.getViewContainer().repaint();
 		}
 	}
 }

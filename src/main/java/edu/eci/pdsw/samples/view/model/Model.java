@@ -1,4 +1,4 @@
-package org.jacksoft.paintmodel;
+package edu.eci.pdsw.samples.view.model;
 
 import java.util.LinkedList;
 
@@ -6,7 +6,7 @@ import com.datasoft.dataloader.LineDescriptor;
 import com.datasoft.dataloader.PointsDataLoader;
 
 
-import edu.eci.arsw.samples.Line;
+import edu.eci.pdsw.samples.view.Line;
 
 public class Model {
 
