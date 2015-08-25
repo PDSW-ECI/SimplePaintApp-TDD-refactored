@@ -109,11 +109,9 @@ public class SimplePaintAppController {
             viewContainer.repaint();
 
         } catch (DataLoadException e1) {
-            throw new DataLoadException("Error on data loading.", e1);
-        } catch (ClassNotFoundException e1) {
-            throw new DataLoadException("Error on data loading.", e1);
-        } catch (SQLException e1) {
-            throw new DataLoadException("Error on data loading.", e1);
+            throw new DataLoadException("Error on data loading:"+e1.getLocalizedMessage(), e1);
+        } catch (ClassNotFoundException | SQLException e1) {
+            throw new DataLoadException("Error on data loading."+e1.getLocalizedMessage(), e1);
         }
 
     }
